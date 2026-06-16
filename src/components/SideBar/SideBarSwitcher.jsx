@@ -68,5 +68,7 @@ export function SideBarSwitcher() {
     return null;
   }
 
-  return role === "admin" ? <SideBarAdmin /> : <SideBar />;
+  const roleNormalizado = String(role || "").trim().toUpperCase();
+
+  return roleNormalizado === "ADMIN" ? <SideBarAdmin /> : <SideBar />;
 }

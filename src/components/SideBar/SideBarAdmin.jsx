@@ -51,6 +51,7 @@ export function SideBarAdmin() {
 
     const cerrarSesion = () => {
         localStorage.removeItem("token");
+        localStorage.removeItem("role");
         sessionStorage.removeItem("usuario");
         navigate("/");
     };
