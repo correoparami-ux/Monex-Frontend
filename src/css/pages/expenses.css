@@ -1,0 +1,321 @@
+/* CONTENIDO GENERAL */
+.contenido_Gastos {
+    padding: 135px 40px 30px 40px;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+}
+
+.contenido_Gastos h1 {
+    font-size: 30px;
+    margin-bottom: 6px;
+    color: #374151;
+}
+
+.contenido_Gastos > p {
+    color: #374151;
+    font-weight: 600;
+    margin-bottom: 28px;
+}
+
+/* BARRA SUPERIOR */
+.barra_Gastos {
+    width: 100%;
+    background-color: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 28px 20px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.input_con_icono_gastos {
+    position: relative;
+    width: 32%;
+    min-width: 280px;
+}
+
+.icono_buscar_gastos {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    opacity: 0.7;
+}
+
+.input_Buscar_Gastos {
+    width: 100%;
+    height: 44px;
+    padding: 0 12px 0 50px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    background-color: #e5e7eb;
+    outline: none;
+    color: #374151;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    box-sizing: border-box;
+}
+
+.input_Fecha_Gastos,
+.select_Gastos {
+    width: 28%;
+    min-width: 240px;
+    height: 44px;
+    padding: 0 16px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    background-color: #e5e7eb;
+    outline: none;
+    color: #374151;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    box-sizing: border-box;
+}
+
+.select_Gastos {
+    cursor: pointer;
+}
+
+.input_Buscar_Gastos::placeholder,
+.input_Fecha_Gastos::placeholder {
+    color: #9ca3af;
+}
+
+.input_Buscar_Gastos:hover,
+.input_Fecha_Gastos:hover,
+.select_Gastos:hover {
+    background-color: #d1d5db;
+}
+
+/* TABLA */
+.tabla_expenses {
+    width: 100%;
+    background-color: #eef0f2;
+    border-radius: 10px;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.mensaje_Sin_Gastos {
+    text-align: center;
+    color: #6b7280;
+    padding: 20px;
+}
+
+.tabla_expenses table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.nav_tabla_gastos {
+    background-color: #d9e2dc;
+}
+
+.nav_tabla_gastos th {
+    padding: 18px 10px;
+    font-weight: bold;
+    color: #374151;
+    text-align: center;
+    font-size: 15px;
+}
+
+.body_tabla_gastos td {
+    padding: 18px 10px;
+    border-bottom: 1px solid #e5e7eb;
+    color: #374151;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* ANCHOS DE COLUMNAS */
+.tabla_expenses th:nth-child(1),
+.tabla_expenses td:nth-child(1) {
+    width: 13%;
+}
+
+.tabla_expenses th:nth-child(2),
+.tabla_expenses td:nth-child(2) {
+    width: 13%;
+}
+
+.tabla_expenses th:nth-child(3),
+.tabla_expenses td:nth-child(3) {
+    width: 13%;
+}
+
+.tabla_expenses th:nth-child(4),
+.tabla_expenses td:nth-child(4) {
+    width: 13%;
+}
+
+.tabla_expenses th:nth-child(5),
+.tabla_expenses td:nth-child(5) {
+    width: 11%;
+}
+
+.tabla_expenses th:nth-child(6),
+.tabla_expenses td:nth-child(6) {
+    width: 11%;
+}
+
+.tabla_expenses th:nth-child(7),
+.tabla_expenses td:nth-child(7) {
+    width: 10%;
+}
+
+.tabla_expenses th:nth-child(8),
+.tabla_expenses td:nth-child(8) {
+    width: 16%;
+}
+
+.tabla_expenses td:last-child {
+    white-space: nowrap;
+}
+
+.tabla_expenses tr:last-child td {
+    border-bottom: none;
+}
+
+.body_tabla_gastos tr:hover {
+    background-color: #f9fafb;
+}
+
+/* BOTONES TABLA */
+.boton_editar_expenses {
+    background-color: #4caf50;
+    color: #1f2937;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 14px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    opacity: 90%;
+}
+
+.boton_editar_expenses:hover {
+    background-color: #6bbf7c;
+}
+
+.boton_eliminar_expenses {
+    background-color: #e74c3c;
+    color: #1f2937;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    opacity: 90%;
+}
+
+.boton_eliminar_expenses:hover {
+    background-color: #e06f6f;
+}
+
+/* PAGINACIÓN */
+.paginacion_gastos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 18px 12px 18px;
+    background-color: #eef0f2;
+    color: #6b7280;
+    font-weight: 600;
+}
+
+.paginacion_gastos p {
+    margin: 0;
+}
+
+.botones_paginacion_gastos {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.botones_paginacion_gastos button {
+    height: 40px;
+    min-width: 46px;
+    padding: 0 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    background-color: #ffffff;
+    color: #374151;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.botones_paginacion_gastos button:hover:not(:disabled) {
+    background-color: #f3f4f6;
+}
+
+.botones_paginacion_gastos button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.botones_paginacion_gastos .pagina_activa {
+    background-color: #45ad4d;
+    color: white;
+    border-color: #45ad4d;
+}
+
+@media (max-width: 900px) {
+    .contenido_Gastos {
+        padding: 122px 16px 20px 16px;
+    }
+
+    .barra_Gastos {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        padding: 18px 16px;
+    }
+
+    .input_con_icono_gastos,
+    .input_Fecha_Gastos,
+    .select_Gastos {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .tabla_expenses {
+        overflow-x: auto;
+    }
+
+    .tabla_expenses table {
+        min-width: 980px;
+    }
+
+    .paginacion_gastos {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 520px) {
+    .contenido_Gastos h1 {
+        font-size: 24px;
+    }
+
+    .tabla_expenses table {
+        min-width: 860px;
+    }
+}

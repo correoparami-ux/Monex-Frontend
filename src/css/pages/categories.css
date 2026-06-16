@@ -1,0 +1,282 @@
+/* CONTENIDO GENERAL */
+.contenido_Categorias {
+    padding: 135px 40px 30px 40px;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+}
+
+.contenido_Categorias h1 {
+    font-size: 30px;
+    margin-bottom: 6px;
+    color: #374151;
+}
+
+.contenido_Categorias > p {
+    color: #374151;
+    font-weight: 600;
+    margin-bottom: 28px;
+}
+
+/* BARRA SUPERIOR */
+.barra_Categorias {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 30px;
+}
+
+.input_con_icono {
+    position: relative;
+    width: 65%;
+    max-width: 650px;
+}
+
+.icono_buscar {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    opacity: 0.7;
+}
+
+.input_Buscar {
+    width: 100%;
+    height: 44px;
+    padding: 0 12px 0 50px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    background-color: #e5e7eb;
+    outline: none;
+    color: #374151;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    box-sizing: border-box;
+}
+
+.input_Buscar::placeholder {
+    color: #9ca3af;
+}
+
+.input_Buscar:hover {
+    background-color: #d1d5db;
+}
+
+.btn_Agregar_Categoria {
+    background-color: #45ad4d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 44px;
+    padding: 0 30px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn_Agregar_Categoria:hover {
+    background-color: #3b9642;
+}
+
+/* TABLA */
+.tabla_Categorias {
+    width: 100%;
+    background-color: #eef0f2;
+    border-radius: 10px;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.mensaje_Sin_Categorias {
+    text-align: center;
+    color: #6b7280;
+    padding: 20px;
+}
+
+.tabla_Categorias table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.tabla_Categorias th {
+    background-color: #d9e2dc;
+    padding: 18px 10px;
+    font-weight: bold;
+    color: #374151;
+    text-align: center;
+    font-size: 15px;
+}
+
+.tabla_Categorias td {
+    padding: 18px 10px;
+    border-bottom: 1px solid #e5e7eb;
+    color: #374151;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* ANCHOS DE COLUMNAS */
+.tabla_Categorias th:nth-child(1),
+.tabla_Categorias td:nth-child(1) {
+    width: 30%;
+}
+
+.tabla_Categorias th:nth-child(2),
+.tabla_Categorias td:nth-child(2) {
+    width: 45%;
+}
+
+.tabla_Categorias th:nth-child(3),
+.tabla_Categorias td:nth-child(3) {
+    width: 25%;
+}
+
+.tabla_Categorias td:last-child {
+    white-space: nowrap;
+}
+
+.tabla_Categorias tr:last-child td {
+    border-bottom: none;
+}
+
+/* BOTONES TABLA */
+.btn_editar {
+    background-color: #4caf50;
+    color: #1f2937;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 14px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    opacity: 90%;
+}
+
+.btn_editar:hover {
+    background-color: #6bbf7c;
+}
+
+.btn_eliminar {
+    background-color: #e74c3c;
+    color: #1f2937;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    opacity: 90%;
+}
+
+.btn_eliminar:hover {
+    background-color: #e06f6f;
+}
+
+/* PAGINACIÓN */
+.paginacion_Categorias {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 18px 12px 18px;
+    background-color: #eef0f2;
+    color: #6b7280;
+    font-weight: 600;
+}
+
+.paginacion_Categorias p {
+    margin: 0;
+}
+
+.botones_paginacion_Categorias {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.botones_paginacion_Categorias button {
+    height: 40px;
+    min-width: 46px;
+    padding: 0 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    background-color: #ffffff;
+    color: #374151;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.botones_paginacion_Categorias button:hover:not(:disabled) {
+    background-color: #f3f4f6;
+}
+
+.botones_paginacion_Categorias button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.botones_paginacion_Categorias .pagina_activa_Categorias {
+    background-color: #45ad4d;
+    color: white;
+    border-color: #45ad4d;
+}
+
+@media (max-width: 900px) {
+    .contenido_Categorias {
+        padding: 122px 16px 20px 16px;
+    }
+
+    .barra_Categorias {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+    }
+
+    .input_con_icono {
+        width: 100%;
+        max-width: none;
+    }
+
+    .btn_Agregar_Categoria {
+        width: 100%;
+    }
+
+    .tabla_Categorias {
+        overflow-x: auto;
+    }
+
+    .tabla_Categorias table {
+        min-width: 720px;
+    }
+
+    .paginacion_Categorias {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 520px) {
+    .contenido_Categorias h1 {
+        font-size: 24px;
+    }
+
+    .contenido_Categorias > p {
+        margin-bottom: 20px;
+    }
+
+    .tabla_Categorias table {
+        min-width: 640px;
+    }
+}

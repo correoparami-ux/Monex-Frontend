@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.contenedor_sideBar{
+  width: clamp(240px, 20vw, 283px);
+  height: calc(100vh - 110px); /* El alto total menos el alto de la navbar */
+  margin-top: 100px;
+  left: 0;
+  top: 110px;                  /* BAJA la sidebar para que no tape la navbar */
+  background-color: #fff;
+  border-right: 1px solid #ced4da;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.boton_inicio{
+  display: flex; /* Usar flexbox para alinear contenido */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: space-between; /* Empujar texto a la izquierda, imagen a la derecha */
+  width: 100%;
+  max-width: 223px; /* Aumentado el ancho */
+  height: 42px;
+  margin-top: 40px;
+  background-color: #4CAF50;
+  padding: 10px 15px; /* Añadir padding para mejor apariencia */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  
+}
+
+.boton_inicio img{
+  width: 40px;
+  height: 40px;
+}
+
+.boton_gastos{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 80px; /* Ajuste de la separación vertical */
+  width: 100%;
+  max-width: 223px; /* Aumentado el ancho */
+  background-color: #4CAF50;
+  padding: 10px 15px;
+  height: 42px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+}
+.boton_gastos img{
+  width: 30px;
+  height: 30px;
+}
+
+.boton_categoria{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 223px; /* Aumentado el ancho */
+  height: 42px;
+  margin-top: 30px; /* Ajuste de la separación vertical */
+  background-color: #4CAF50;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+}
+.boton_categoria img{
+  width: 30px;
+  height: 30px;
+}
+
+.boton_analisis{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 223px; /* Aumentado el ancho */
+  height: 42px;
+  margin-top: 30px; /* Ajuste de la separación vertical */
+  background-color: #4CAF50;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+}
+.boton_analisis img{
+  width: 30px;
+  height: 30px;
+}
+
+
+.boton_est_mensual{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 223px; /* Aumentado el ancho */
+  height: 42px;
+  margin-top: 30px; /* Ajuste de la separación vertical */
+  background-color: #4CAF50;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+}
+.boton_est_mensual img{
+  width: 30px;
+  height: 30px;
+}
+
+.texto_usuario_sidebar{
+    font-size: 20px;
+    font-family: Outfit, sans-serif;
+    font-weight: bold;
+    color: #374151;
+    margin: 0;
+}
+
+.texto_email_sidebar{
+    font-size: 14px;
+    font-family: Poppins, sans-serif;
+    font-weight: medium;
+    margin: 0;
+    color: #374151;
+}
+
+
+.sidebar_footer {
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 15px;
+    margin-top: 40px;
+    border-top: 1px solid #bdbdbd; /* línea separadora */
+}
+
+/* INFO USUARIO */
+.usuario_info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  width: 100%;
+}
+
+.usuario_avatar_container {
+    width: 86.67px;
+    height: 85.83px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.usuario_avatar_img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.usuario_datos {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+    flex: 1;
+}
+
+.texto_email_sidebar{
+  color: black;
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.icono_Usuario {
+    width: 86.67px;
+    height: 85.83px;
+    border-radius: 50%;
+}
+
+/* BOTON LOGOUT */
+.boton_logout {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #D1B475;
+    color: white;
+    margin-top: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex; /* Usar flexbox para alinear contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: space-between; /* Empujar la imagen a la izquierda y el texto a la derecha */
+    /* Eliminamos 'gap' porque 'space-between' maneja la distribución del espacio */
+    width: 190px; /* Ajustar ancho si es necesario */
+    padding: 12px 15px; /* Ajustar padding */
+    font-size: 20px;
+    color: white; /* Asegurar color de texto */
+    border-radius: 10px; /* Mantener border-radius */
+}
+.boton_logout img {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 900px) {
+  .contenedor_sideBar {
+    width: 100%;
+    height: auto;
+    margin-top: 110px;
+    padding: 16px;
+    border-right: none;
+    border-bottom: 1px solid #ced4da;
+  }
+
+  .contenedor_botones {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .boton_inicio,
+  .boton_gastos,
+  .boton_categoria,
+  .boton_analisis,
+  .boton_est_mensual {
+    width: 100%;
+    max-width: none;
+    margin-top: 0;
+    font-size: 16px;
+    height: 48px;
+  }
+
+  .boton_inicio img,
+  .boton_gastos img,
+  .boton_categoria img,
+  .boton_analisis img,
+  .boton_est_mensual img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .sidebar_footer {
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  .usuario_info {
+    justify-content: center;
+  }
+
+  .usuario_datos {
+    align-items: center;
+  }
+
+  .texto_email_sidebar {
+    max-width: 100%;
+  }
+
+  .boton_logout {
+    width: 100%;
+    max-width: 320px;
+    margin: 20px auto 0 auto;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .contenedor_botones {
+    grid-template-columns: 1fr;
+  }
+
+  .usuario_info {
+    flex-direction: column;
+    text-align: center;
+  }
+}

@@ -1,0 +1,309 @@
+/*--------------------------.--------*/
+/*----------------Registro--------------*/
+/*-----------------------------------*/
+.contenedor_registro {
+  display: flex;
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+}
+
+.fondo_imagen_registro {
+  flex: 1;
+  background-image: url("/src/assets/img/fondo_login.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img_logo_registro{
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin: -12px auto -48px auto;
+}
+
+.img_registro{
+  display: flex;
+  width: 200px;
+  margin-left: -0px;
+  margin-bottom: -150px;
+}
+
+.register_registro {
+  flex: 1; 
+  background-color: #4CAF50;
+  display: flex;            
+  justify-content: center;   
+  align-items: center; 
+  padding: 40px 20px;
+  overflow-y: auto;  
+  min-width: 0;
+}
+
+.register_contenido_registro {
+  width: min(100%, 1000px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 901px) {
+  .register_contenido_registro {
+    transform: translateY(-28px);
+  }
+}
+
+.text_usuario_registro{
+  display: block;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  width: 100%;
+  text-align: left;
+}
+
+.text_email_registro{
+  display: block;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  width: 100%;
+  text-align: left;
+}
+
+.input_group_registro {
+  position: relative;
+  margin-bottom: 25px;
+  width: 100%;
+  max-width: 520px;
+}
+
+.input_wrapper_registro {
+  position: relative;
+  width: 100%;
+}
+
+.input_usuario_registro {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  width: 100%;
+  height: 60px;
+  background: #24282C;
+  backdrop-filter: blur(4px);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+  outline: none;
+  opacity: 0.5;
+  transition: box-shadow 0.2s;
+  line-height: 100%;
+  display: block;
+  margin: 0;
+  box-sizing: border-box;
+  margin-left: 0;
+}
+
+.input_email_registro {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  width: 100%;
+  height: 60px;
+  background: #24282C;
+  backdrop-filter: blur(4px);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+  outline: none;
+  opacity: 0.5;
+  transition: box-shadow 0.2s;
+  line-height: 100%;
+  display: block;
+  margin: 0;
+  box-sizing: border-box;
+  margin-left: 0;
+ 
+}
+
+.input_email_registro:focus {
+  box-shadow: 0 0 0 2px #D1B475;
+  opacity: 0.7;
+}
+
+.input_icon_email_registro,
+.input_icon_password_registro {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px; /* Tamaño del icono */
+  cursor: pointer; /* Indica que el icono es clicable */
+}
+
+.text_contraseña_registro{
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;    
+    font-weight: 700;
+    display: block;
+    color: white;
+    margin: 0 0 8px 0;
+    width: 100%;
+  text-align: left;
+}
+
+.input_contraseña_registro{
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+    height: 60px;
+    background: #24282C;
+    backdrop-filter: blur(4px);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+    outline: none;
+    opacity: 0.5;
+    transition: box-shadow 0.2s;
+    line-height: 100%;
+    display: block;
+    margin: 0;
+    box-sizing: border-box;
+    margin-left: 0;
+}
+
+.error_registro {
+    color: #d51313;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.form_register_registro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenedor-botones_registro {
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;        /* Asegúrate de que el contenedor ocupe el ancho disponible */
+    margin-top: 20px;   /* Un poco de aire respecto al último input */
+    font-family: 'Outfit', sans-serif;
+  margin-left: 0;
+    
+}
+
+.boton_registrarse{
+  background-color: #D1B475;
+  color: #3E2723;
+  border: none; /* Mejor sin borde negro para que se vea más moderno */
+  border-radius: 25px;
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.boton_registrarse:hover {
+    background-color: #bc9e62; /* Oscurece un poco al pasar el mouse */
+}
+
+@media (max-width: 900px) {
+  .contenedor_registro {
+    flex-direction: column;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .fondo_imagen_registro {
+    display: none;
+  }
+
+  .register_registro {
+    width: 100%;
+    padding: 32px 18px;
+    align-items: center;
+  }
+
+  .register_contenido_registro {
+    transform: none;
+  }
+
+  .img_logo_registro {
+    width: min(92vw, 560px);
+    margin: -6px auto -24px auto;
+  }
+
+  .img_registro {
+    width: 96px;
+    margin: 0 auto 12px auto;
+  }
+
+  .input_group_registro,
+  .input_wrapper_registro,
+  .input_usuario_registro,
+  .input_email_registro,
+  .input_contraseña_registro {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .text_usuario_registro,
+  .text_email_registro,
+  .text_contraseña_registro {
+    margin-left: 0;
+  }
+
+  .contenedor-botones_registro {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .boton_registrarse {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .register_registro {
+    padding: 24px 16px;
+  }
+
+  .text_usuario_registro,
+  .text_email_registro,
+  .text_contraseña_registro,
+  .input_usuario_registro,
+  .input_email_registro,
+  .input_contraseña_registro {
+    font-size: 16px;
+  }
+
+  .input_usuario_registro,
+  .input_email_registro,
+  .input_contraseña_registro {
+    height: 52px;
+  }
+
+  .boton_registrarse {
+    height: 46px;
+  }
+}

@@ -1,0 +1,116 @@
+.modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+}
+
+.modal_eliminar_gasto {
+    width: min(96vw, 620px);
+    background-color: #f1f2f4;
+    border-radius: 10px;
+    padding: 35px 55px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.icono_warning {
+    display: block;
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 15px auto;
+}
+
+.modal_eliminar_gasto h2 {
+    text-align: center;
+    color: #374151;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.texto_advertencia {
+    text-align: center;
+    color: #6b7280;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.info_gasto_eliminar {
+    background-color: #d1d5db;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.info_gasto_eliminar p {
+    margin: 0;
+    padding: 14px;
+    color: #374151;
+    font-weight: 600;
+    border-bottom: 1px solid #9ca3af;
+}
+
+.info_gasto_eliminar p:last-child {
+    border-bottom: none;
+}
+
+.modal_botones {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.btn_cancelar_modal,
+.btn_confirmar_eliminar {
+    width: 50%;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn_cancelar_modal {
+    background-color: #8bcf93;
+}
+
+.btn_cancelar_modal:hover {
+    background-color: #6bbf7c;
+}
+
+.btn_confirmar_eliminar {
+    background-color: #ef6f64;
+}
+
+.btn_confirmar_eliminar:hover {
+    background-color: #e05f55;
+}
+
+@media (max-width: 520px) {
+    .modal_eliminar_gasto {
+        width: 96%;
+        padding: 24px 18px;
+    }
+
+    .modal_eliminar_gasto h2 {
+        font-size: 22px;
+    }
+
+    .modal_botones {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn_cancelar_modal,
+    .btn_confirmar_eliminar {
+        width: 100%;
+    }
+}

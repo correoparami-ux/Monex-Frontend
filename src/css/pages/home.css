@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+.home_page_content {
+    flex: 1;
+    min-width: 0;
+    padding-top: 120px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+.home_page_content > h1 {
+    margin-left: 20px;
+    margin-bottom: 0;
+    color: #374151;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+/* LAYOUT GENERAL */
+.layout_home {
+    display: flex;
+    gap: 22px;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: flex-start;
+}
+
+/* COLUMNAS */
+.col_izquierda {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.col_derecha {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* BOXES */
+.box_grafico_lineal_home,
+.box_grafico_torta_home,
+.contendor_ultimos_gastos,
+.contenedor_pago_tarjeta_home {
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+/* TOTAL GASTOS DEL MES */
+.box_grafico_lineal_home {
+    height: 165px;
+    padding: 18px 22px;
+}
+
+.box_grafico_lineal_home h1 {
+    margin: 0;
+    font-size: 17px;
+    color: #374151;
+    font-weight: 700;
+    font-family: "Outfit", sans-serif;
+}
+
+.resumen_total_mes_home {
+    .resumen_total_mes_home {
+    display: flex;
+    flex-direction: row; /* Forzar que estén en la misma fila */
+    flex-wrap: nowrap; /* Evitar que salten a la siguiente línea */
+    align-items: center; /* Alinear verticalmente al centro */
+    gap: 14px;
+}
+
+}
+
+.total_mes_home {
+    display: block;
+    margin-top: 0;
+    font-size: 46px;
+    font-weight: 700;
+    color: #45ad4d;
+    line-height: 1;
+    font-family: "Inter", sans-serif;
+}
+
+.texto_presupuesto_home {
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 0;
+    padding: 5px 12px;
+    border-radius: 10px;
+    background-color: #e6f4ea;
+    color: #45ad4d;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+}
+
+.texto_base_presupuesto_home {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 16px;
+    border-radius: 14px;
+    background-color: #e6f4ea;
+    max-width: 430px;
+    min-height: auto;
+    margin-top: 0;
+}
+
+.texto_base_presupuesto_home p {
+    margin: 0;
+    color: #2f3b52;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.35;
+    font-family: "Outfit", sans-serif;
+}
+
+.icono_resumen_home {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.alerta_presupuesto {
+    background-color: #fee2e2;
+    color: #dc2626;
+    font-weight: 700;
+}
+
+/* INFORMACION GENERAL */
+.box_grafico_torta_home {
+    height: 300px;
+    padding: 24px 22px;
+    display: flex;
+    align-items: center;
+}
+
+.contenido_info_home {
+    width: 100%;
+}
+
+.info_destacada_home {
+    padding: 24px 20px;
+    border-radius: 16px;
+    background-color: #e6f4ea;
+    border: 1px solid #b7e4c1;
+}
+
+.info_destacada_home strong {
+    display: block;
+    margin-bottom: 16px;
+    color: #374151;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.info_destacada_home p {
+    margin: 0;
+    color: #4b5563;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+.info_destacada_home p strong {
+    display: inline;
+    margin: 0;
+    font-size: 16px;
+    color: #374151;
+}
+
+/* PAGO TARJETA */
+.contenedor_pago_tarjeta_home {
+    height: 270px;
+    padding: 16px 22px 18px 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor_pago_tarjeta_home h2 {
+    margin: 0;
+    font-size: 17px;
+    color: #374151;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.contenido_pago_tarjeta_home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 28px;
+    gap: 18px;
+}
+
+.monto_pago_tarjeta_home {
+    display: block;
+    color: #374151;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1;
+    font-family: "Inter", sans-serif;
+}
+
+.cantidad_pago_tarjeta_home {
+    margin: 12px 0 0 0;
+    color: #7b8493;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+
+.icono_tarjeta_credito_home {
+    width: 135px;
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.btn_detalle_tarjeta_home {
+    width: 205px;
+    height: 42px;
+    margin: 18px auto 0 auto;
+    border: none;
+    border-radius: 9px;
+    background-color: #d5b873;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.btn_detalle_tarjeta_home:hover {
+    opacity: 0.9;
+}
+
+/* ULTIMOS GASTOS */
+.contendor_ultimos_gastos {
+    padding: 14px 18px 16px 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+.header_ultimos_gastos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.header_ultimos_gastos h1 {
+    margin: 0;
+    color: #374151;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+/* DECORACION */
+.decoracion_header_gastos {
+    display: grid;
+    grid-template-columns: repeat(2, 8px);
+    gap: 6px;
+}
+
+.decoracion_header_gastos span {
+    width: 8px;
+    height: 8px;
+    background-color: #6b7280;
+    border-radius: 1px;
+}
+
+/* TABLA */
+.tabla_ultimos_gastos_home {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla_ultimos_gastos_home tbody tr {
+    border-top: 1px solid #d1d5db;
+}
+
+.tabla_ultimos_gastos_home td {
+    padding: 12px 10px;
+    vertical-align: middle;
+    color: #374151;
+    font-size: 13px;
+}
+
+.info_gasto_home {
+    width: 34%;
+}
+
+.info_gasto_home strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: #374151;
+}
+
+.info_gasto_home span {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.monto_gasto_home,
+.metodo_gasto_home {
+    font-size: 13px;
+    color: #374151;
+    font-weight: 500;
+}
+
+.monto_gasto_home strong,
+.metodo_gasto_home strong {
+    font-weight: 700;
+}
+
+/* BOTON VER TODOS */
+.contenedor_btn_ver_todos {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+}
+
+.btn_ver_todos_home {
+    border: none;
+    background: transparent;
+    color: #374151;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.btn_ver_todos_home:hover {
+    opacity: 0.75;
+}
+
+@media (max-width: 1200px) {
+    .layout_home {
+        flex-direction: column;
+    }
+
+    .col_izquierda,
+    .col_derecha {
+        width: 100%;
+    }
+
+    .box_grafico_lineal_home,
+    .box_grafico_torta_home,
+    .contendor_ultimos_gastos,
+    .contenedor_pago_tarjeta_home {
+        height: auto;
+        min-height: 0;
+    }
+
+    .contenido_pago_tarjeta_home {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 900px) {
+    .home_page_content {
+        padding-top: 120px;
+    }
+
+    .home_page_content > h1 {
+        margin-left: 16px;
+        font-size: 24px;
+    }
+
+    .layout_home {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .resumen_total_mes_home,
+    .contenido_pago_tarjeta_home {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .total_mes_home,
+    .monto_pago_tarjeta_home {
+        font-size: 36px;
+    }
+
+    .texto_base_presupuesto_home {
+        max-width: 100%;
+    }
+
+    .icono_tarjeta_credito_home {
+        width: 110px;
+    }
+
+    .btn_detalle_tarjeta_home {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .tabla_ultimos_gastos_home {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .tabla_ultimos_gastos_home table {
+        min-width: 640px;
+    }
+}
+
+@media (max-width: 520px) {
+    .home_page_content {
+        padding-top: 112px;
+    }
+
+    .home_page_content > h1 {
+        font-size: 22px;
+    }
+
+    .box_grafico_lineal_home,
+    .box_grafico_torta_home,
+    .contendor_ultimos_gastos,
+    .contenedor_pago_tarjeta_home {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .total_mes_home,
+    .monto_pago_tarjeta_home {
+        font-size: 30px;
+    }
+
+    .texto_presupuesto_home,
+    .texto_base_presupuesto_home p,
+    .cantidad_pago_tarjeta_home {
+        font-size: 14px;
+    }
+
+    .icono_tarjeta_credito_home {
+        width: 92px;
+    }
+}

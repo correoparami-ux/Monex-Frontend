@@ -1,0 +1,230 @@
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal_content_tarjeta {
+  background-color: #f5f6f8;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 500px;
+  width: min(92vw, 500px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal_header_tarjeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 12px;
+}
+
+.modal_header_tarjeta h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #374151;
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+}
+
+.modal_close_btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal_close_btn:hover {
+  color: #374151;
+}
+
+.loading_message {
+  font-size: 16px;
+  color: #6b7280;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form_tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form_group_tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form_group_tarjeta label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3436;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form_group_tarjeta input {
+  padding: 10px 12px;
+  border: 1px solid #e8e9ec;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #2d3436;
+  transition: all 0.2s ease;
+}
+
+.input_with_currency {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #e8e9ec;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.currency_symbol {
+  padding: 10px 12px;
+  color: #2d3436;
+  font-weight: 600;
+  background-color: #f9f9f9;
+  border-right: 1px solid #e8e9ec;
+  font-family: 'Poppins', sans-serif;
+}
+
+.input_with_currency input {
+  flex: 1;
+  border: none;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  background-color: transparent;
+  color: #2d3436;
+}
+
+.form_group_tarjeta input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.input_with_currency input:focus {
+  outline: none;
+}
+
+.input_with_currency:has(input:focus) {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.form_group_tarjeta input::placeholder {
+  color: #6b6f7a;
+  font-weight: 400;
+}
+
+.form_group_tarjeta input[type="number"]::-webkit-outer-spin-button,
+.form_group_tarjeta input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.form_group_tarjeta input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.error_message {
+  background-color: #fee;
+  border: 1px solid #fcc;
+  color: #c33;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form_actions_tarjeta {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  justify-content: flex-end;
+}
+
+.btn_cancel_tarjeta,
+.btn_submit_tarjeta {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s ease;
+}
+
+.btn_cancel_tarjeta {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.btn_cancel_tarjeta:hover:not(:disabled) {
+  background-color: #d1d5db;
+}
+
+.btn_submit_tarjeta {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn_submit_tarjeta:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.btn_cancel_tarjeta:disabled,
+.btn_submit_tarjeta:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 520px) {
+  .modal_content_tarjeta {
+    width: 96%;
+    padding: 16px;
+  }
+
+  .modal_header_tarjeta h2 {
+    font-size: 18px;
+  }
+
+  .form_actions_tarjeta {
+    flex-direction: column;
+  }
+
+  .btn_cancel_tarjeta,
+  .btn_submit_tarjeta {
+    width: 100%;
+  }
+}

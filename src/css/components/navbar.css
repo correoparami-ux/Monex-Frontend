@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.navbar {
+    height: 110px;
+    width: 100%;
+    background-color: #f1f2f4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+    border-bottom: 3px solid #ced4da;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    gap: 20px;
+}
+.img_logo_navbar{
+    width: clamp(220px, 28vw, 380px);
+    height: 110px;
+    display: block;
+    object-fit: contain;
+    margin-left: -160px;
+    margin-right: auto;
+    flex-shrink: 0;
+}
+.btn_Agregar_Gasto {
+    color: white;
+    padding: 8px 18px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 30px;
+    cursor: pointer;
+    display: flex; /* Usar flexbox para alinear contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: space-between; /* Empujar texto a la izquierda, imagen a la derecha */
+    width: 223px; /* Aumentado el ancho */
+    height: 42px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.user_config_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.icono_Usuario {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.user_config_label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #374151;
+    margin: 0;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 12px 16px;
+        gap: 12px;
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 110px;
+        justify-content: space-between;
+    }
+
+    .img_logo_navbar {
+        width: min(60vw, 260px);
+        height: auto;
+        margin-left: -8px;
+        order: 1;
+    }
+
+    .btn_Agregar_Gasto {
+        order: 3;
+        margin-right: 0;
+        padding: 10px 14px;
+        font-size: 14px;
+        flex: 1 1 180px;
+    }
+
+    .user_config_container {
+        order: 2;
+        flex: 0 0 auto;
+    }
+
+    .icono_Usuario {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media (max-width: 520px) {
+    .navbar {
+        padding: 10px 12px;
+    }
+
+    .img_logo_navbar {
+        width: min(68vw, 220px);
+    }
+
+    .btn_Agregar_Gasto {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .user_config_label {
+        font-size: 11px;
+    }
+}

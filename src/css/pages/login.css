@@ -1,0 +1,360 @@
+/*--------------------------.--------*/
+/*----------------LOGIN--------------*/
+/*-----------------------------------*/
+.contenedor_login {
+  display: flex;
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+}
+
+.fondo_imagen {
+  flex: 1 1 0;
+  min-width: 0;
+  background-image: url("/src/assets/img/fondo_login.png");
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img_logo{
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin: -12px auto -48px auto;
+}
+
+.img_login{
+  display: flex;
+  width: 200px;
+  margin: 0 auto -150px auto;
+}
+
+.login {
+  flex: 1 1 0;
+  min-width: 0;
+  background-color: #4CAF50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(24px, 4vw, 48px) clamp(18px, 3vw, 56px);
+  overflow-y: auto;
+}
+
+.login_contenido {
+  width: min(100%, 1000px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form_login {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text_email{
+  display: block;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 0;
+}
+
+.input_group {
+  position: relative;
+  margin-bottom: 25px; 
+  width: 100%;
+}
+
+.input_wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input_email {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  width: 100%;
+  height: 60px;
+  background: #24282C;
+  backdrop-filter: blur(4px);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+  outline: none;
+  opacity: 0.5;
+  transition: box-shadow 0.2s;
+  line-height: 100%;
+  display: block;
+  margin: 0;
+  box-sizing: border-box;
+  margin-left: 0;
+ 
+}
+
+.input_email:focus {
+  box-shadow: 0 0 0 2px #D1B475;
+  opacity: 0.7;
+}
+
+.input_icon_email,
+.input_icon_password {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px; /* Tamaño del icono */
+  cursor: pointer; /* Indica que el icono es clicable */
+}
+
+.text_contraseña{
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;    
+    font-weight: 700;
+    display: block;
+    color: white;
+  margin-left: 0;
+}
+
+.input_contraseña{
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+    height: 60px;
+    background: #24282C;
+    backdrop-filter: blur(4px);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+    outline: none;
+    opacity: 0.5;
+    transition: box-shadow 0.2s;
+    line-height: 100%;
+    display: block;
+    margin: 0;
+    box-sizing: border-box;
+    margin-left: 0;
+}
+
+.error {
+    color: #d51313;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.acciones_login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 34px;
+  margin-left: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+.contenedor-botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: none;
+}
+
+.google_login_block {
+  margin-top: 0;
+  width: 100%;
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.google_login_separator {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.google_login_separator::before,
+.google_login_separator::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: calc(50% - 18px);
+  height: 1px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.google_login_separator::before {
+  left: 0;
+}
+
+.google_login_separator::after {
+  right: 0;
+}
+
+.google_button_container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  min-height: 50px;
+}
+
+.google_login_message {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+}
+
+.boton_ingresar{
+  background-color: #D1B475;
+    color: #3E2723;
+    font-weight: bold;
+    border: black;
+    border-radius: 25px; /* Bordes redondeados modernos */
+    width: 100%; /* Que ocupe lo mismo que los inputs */
+    max-width: 320px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.boton_registro{
+    background-color: #D1B475; /* Sin fondo */
+    color: #3E2723;
+    border: black; /* Solo el borde */
+    border-radius: 25px;
+    width: 100%;
+  max-width: 320px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.boton_ingresar:hover {
+    background-color: #bc9e62; /* Oscurece un poco al pasar el mouse */
+}
+.boton_registro:hover {
+    background-color: #bc9e62; /* Oscurece un poco al pasar el mouse */
+}
+.texto_olvidar_contraseña{
+  margin-right: 50px;
+}
+
+@media (max-width: 900px) {
+  .contenedor_login {
+    flex-direction: column;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .fondo_imagen {
+    display: none;
+  }
+
+  .login {
+    width: 100%;
+    padding: 32px 20px;
+    align-items: flex-start;
+  }
+
+  .login_contenido {
+    width: 100%;
+    max-width: none;
+  }
+
+  .img_logo {
+    width: min(92vw, 560px);
+    margin: -6px auto -28px auto;
+  }
+
+  .img_login {
+    width: 140px;
+    margin: 0 auto 18px auto;
+  }
+
+  .input_group,
+  .input_wrapper,
+  .input_email,
+  .input_contraseña {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .text_email,
+  .text_contraseña {
+    margin-left: 0;
+  }
+
+  .contenedor-botones {
+    flex-direction: row;
+    gap: 14px;
+    max-width: 100%;
+  }
+
+  .google_login_block {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .acciones_login {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .boton_ingresar,
+  .boton_registro {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .texto_olvidar_contraseña {
+    margin-right: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .login {
+    padding: 24px 16px;
+  }
+
+  .text_email,
+  .text_contraseña,
+  .input_email,
+  .input_contraseña {
+    font-size: 16px;
+  }
+
+  .input_email,
+  .input_contraseña {
+    height: 52px;
+  }
+
+  .boton_ingresar,
+  .boton_registro {
+    height: 46px;
+  }
+
+  .contenedor-botones {
+    flex-direction: column;
+  }
+}
