@@ -256,7 +256,13 @@
     background-color: #bc9e62; /* Oscurece un poco al pasar el mouse */
 }
 .link_olvidaste_contraseña{
-  margin-right: 50px;
+    margin-left: 300px;
+    color: #3e2723;
+    font-family: 'Outfit', sans-serif;
+}
+.link_olvidaste_contraseña:hover {
+    text-decoration: underline;
+    background-color: #d1b475;
 }
 
 @media (max-width: 900px) {
