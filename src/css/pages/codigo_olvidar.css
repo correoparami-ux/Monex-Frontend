@@ -26,16 +26,25 @@
 }
 
 .codigo_input {
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    letter-spacing: 8px;
-    padding: 12px;
-    border: 1px solid #d6d6d6;
-    border-radius: 10px;
+    font-family: Outfit, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
     width: 100%;
-    transition: .25s;
+    height: 60px;
+    background: #24282c;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 4px 4px #00000040;
     outline: none;
+    opacity: .5;
+    transition: box-shadow .2s;
+    line-height: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 .codigo_input:focus {
