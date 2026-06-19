@@ -8,6 +8,7 @@ import './css/pages/home.css';
 import './css/pages/categories.css';
 import './css/pages/expenses.css';
 import './css/pages/analisis.css';
+import './css/pages/codigo_olvidar.css';
 
 import { Categorias } from './pages/categories/Categories';
 import { Login } from './pages/Login/Login';
