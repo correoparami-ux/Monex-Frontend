@@ -12,7 +12,7 @@
 
 .descripcion_recuperar {
     text-align: center;
-    color: #666;
+    color: #3e2723;
     font-size: 15px;
     line-height: 1.5;
     margin-bottom: 25px;
@@ -69,7 +69,7 @@
     margin-top: 20px;
     text-align: center;
     font-size: 14px;
-    color: #666;
+    color: #3e2723;
 }
 
 .reenviar_codigo span {
@@ -90,7 +90,6 @@
 }
 
 .volver_login a {
-    margin-left: 300px;
     color: #3e2723;
     font-family: Outfit, sans-serif;
 }
