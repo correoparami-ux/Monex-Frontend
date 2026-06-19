@@ -19,6 +19,7 @@ import { Expenses } from './pages/expenses/expenses';
 import { EstMensual } from './pages/est_monthly/est_monthly';
 import { Analisis } from './pages/analisis/analisis';
 import { PanelAdmin } from './pages/admin/panelAdmin';
+import { RecuperarContraseña } from './pages/olvidar_contraseña/codigo_olvidar';
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
           <Route path="/est_monthly" element={<EstMensual/>}/>
           <Route path="/Analisis" element={<Analisis/>}/>
           <Route path="/PanelAdmin" element={<PanelAdmin/>}/>
+          <Route path="/codigo_olvidar" element={<RecuperarContraseña/>}/>
         </Routes>
       </Router>
     </>
