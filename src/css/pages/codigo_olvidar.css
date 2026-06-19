@@ -44,20 +44,20 @@
 }
 
 .boton_codigo {
+    background-color: #d1b475;
+    color: #3e2723;
+    font-weight: 700;
+    border: black;
+    border-radius: 25px;
     width: 100%;
-    padding: 14px;
-    background: #0d47a1;
-    color: white;
-    border: none;
-    border-radius: 10px;
+    max-width: 320px;
+    height: 50px;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: .3s;
+    transition: transform .2s;
 }
 
 .boton_codigo:hover {
-    background: #1565c0;
+    background: #b69e62;
     transform: translateY(-2px);
 }
 
@@ -90,10 +90,9 @@
 }
 
 .volver_login a {
-    color: #0d47a1;
-    text-decoration: none;
-    font-weight: bold;
-    transition: .2s;
+    margin-left: 300px;
+    color: #3e2723;
+    font-family: Outfit, sans-serif;
 }
 
 .volver_login a:hover {
