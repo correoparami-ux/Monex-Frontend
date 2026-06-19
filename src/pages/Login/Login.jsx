@@ -245,7 +245,11 @@ export function Login() {
                                 {mensajeContraseña}
                             </span>
                         </div>
-
+                            <p>
+                                <a href="/ForgotPassword" className="link_olvidaste_contraseña">
+                                    Olvidaste tu contraseña?
+                                </a>
+                            </p>
                         <div className="acciones_login">
                             <div className="contenedor-botones">
                                 <button className="boton_ingresar" type="submit">
@@ -257,7 +261,7 @@ export function Login() {
                                     type="button"
                                     onClick={() => navigate("/Register")}
                                 >
-                                    Registraste
+                                    Registrarte
                                 </button>
                             </div>
 
