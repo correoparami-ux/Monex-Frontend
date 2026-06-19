@@ -255,7 +255,7 @@
 .boton_registro:hover {
     background-color: #bc9e62; /* Oscurece un poco al pasar el mouse */
 }
-.texto_olvidar_contraseña{
+.link_olvidaste_contraseña{
   margin-right: 50px;
 }
 
@@ -326,7 +326,7 @@
     max-width: 100%;
   }
 
-  .texto_olvidar_contraseña {
+  .link_olvidaste_contraseña {
     margin-right: 0;
     text-align: center;
   }
