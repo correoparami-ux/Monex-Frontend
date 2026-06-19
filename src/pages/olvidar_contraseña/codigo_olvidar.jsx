@@ -4,7 +4,7 @@ import logo from "../../assets/logo/Logo_Monex_Azul.png"
 
 
 import { useNavigate } from "react-router-dom";
-import { registrarUsuario } from "../../services/usuarioService";
+import { registrarUsuario, enviarCodigoRecuperacion, verificarCodigoRecuperacion } from "../../services/usuarioService";
 
 export function RecuperarContraseña() {
 
@@ -25,11 +25,15 @@ export function RecuperarContraseña() {
             return;
         }
 
-        // await enviarCodigoRecuperacion(email);
-
-        setCodigoEnviado(true);
-        setMensaje("Se envió un código de verificación a tu correo.");
-        setColorMensaje("#0d47a1");
+        try {
+            await enviarCodigoRecuperacion(email);
+            setCodigoEnviado(true);
+            setMensaje("Se envió un código de verificación a tu correo.");
+            setColorMensaje("#0d47a1");
+        } catch (error) {
+            setMensaje(error.message || "Error al enviar el código");
+            setColorMensaje("red");
+        }
     };
 
     const verificarCodigo = async (e) => {
@@ -41,9 +45,15 @@ export function RecuperarContraseña() {
             return;
         }
 
-        // await verificarCodigo(email, codigo);
-
-        console.log("Código:", codigo);
+        try {
+            await verificarCodigoRecuperacion(email, codigo);
+            setMensaje("Código verificado correctamente.");
+            setColorMensaje("green");
+            console.log("Código:", codigo);
+        } catch (error) {
+            setMensaje(error.message || "Código inválido");
+            setColorMensaje("red");
+        }
     };
 
     return (
