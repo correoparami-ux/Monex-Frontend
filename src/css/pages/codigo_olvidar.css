@@ -1,0 +1,120 @@
+/* ============================
+   RECUPERAR CONTRASEÑA
+============================ */
+
+.titulo_recuperar {
+    text-align: center;
+    color: #0d47a1;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.descripcion_recuperar {
+    text-align: center;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.mensaje_recuperar {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+.codigo_input {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    padding: 12px;
+    border: 1px solid #d6d6d6;
+    border-radius: 10px;
+    width: 100%;
+    transition: .25s;
+    outline: none;
+}
+
+.codigo_input:focus {
+    border-color: #0d47a1;
+    box-shadow: 0 0 0 3px rgba(13,71,161,.15);
+}
+
+.boton_codigo {
+    width: 100%;
+    padding: 14px;
+    background: #0d47a1;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.boton_codigo:hover {
+    background: #1565c0;
+    transform: translateY(-2px);
+}
+
+.boton_codigo:active {
+    transform: scale(.98);
+}
+
+.reenviar_codigo {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.reenviar_codigo span {
+    color: #0d47a1;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .2s;
+}
+
+.reenviar_codigo span:hover {
+    color: #1565c0;
+    text-decoration: underline;
+}
+
+.volver_login {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.volver_login a {
+    color: #0d47a1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .2s;
+}
+
+.volver_login a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+
+@media (max-width:768px){
+
+    .titulo_recuperar{
+        font-size:24px;
+    }
+
+    .descripcion_recuperar{
+        font-size:14px;
+    }
+
+    .codigo_input{
+        font-size:18px;
+        letter-spacing:5px;
+    }
+
+}

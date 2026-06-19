@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import frameee from "../../assets/icon/Frameee.png"
 import logo from "../../assets/logo/Logo_Monex_Azul.png"
 
+
 import { useNavigate } from "react-router-dom";
 import { registrarUsuario } from "../../services/usuarioService";
 
@@ -24,7 +25,6 @@ export function RecuperarContraseña() {
             return;
         }
 
-        // Aquí luego irá el servicio que envía el correo
         // await enviarCodigoRecuperacion(email);
 
         setCodigoEnviado(true);
@@ -41,8 +41,7 @@ export function RecuperarContraseña() {
             return;
         }
 
-        // Aquí irá la llamada al backend
-        // await verificarCodigo(email,codigo);
+        // await verificarCodigo(email, codigo);
 
         console.log("Código:", codigo);
     };
@@ -62,22 +61,11 @@ export function RecuperarContraseña() {
                         className="img_logo_registro"
                     />
 
-                    <h2
-                        style={{
-                            textAlign: "center",
-                            marginBottom: "10px"
-                        }}
-                    >
+                    <h2 className="titulo_recuperar">
                         Recuperar contraseña
                     </h2>
 
-                    <p
-                        style={{
-                            textAlign: "center",
-                            marginBottom: "25px",
-                            color: "#666"
-                        }}
-                    >
+                    <p className="descripcion_recuperar">
                         Ingresa tu correo electrónico y te enviaremos un código de verificación.
                     </p>
 
@@ -118,10 +106,11 @@ export function RecuperarContraseña() {
                                 <div className="input_wrapper_registro">
 
                                     <input
-                                        className="input_usuario_registro"
+                                        className="codigo_input"
                                         type="text"
                                         placeholder="Ej: 482913"
                                         value={codigo}
+                                        maxLength={6}
                                         onChange={(e) => setCodigo(e.target.value)}
                                     />
 
@@ -133,13 +122,8 @@ export function RecuperarContraseña() {
 
                         {mensaje && (
                             <div
-                                style={{
-                                    color: colorMensaje,
-                                    textAlign: "center",
-                                    marginTop: 10,
-                                    marginBottom: 10,
-                                    fontWeight: 500
-                                }}
+                                className="mensaje_recuperar"
+                                style={{ color: colorMensaje }}
                             >
                                 {mensaje}
                             </div>
@@ -148,7 +132,7 @@ export function RecuperarContraseña() {
                         <div className="contenedor-botones_registro">
 
                             <button
-                                className="boton_registrarse"
+                                className="boton_codigo"
                                 type="submit"
                             >
                                 {codigoEnviado
@@ -156,6 +140,23 @@ export function RecuperarContraseña() {
                                     : "Enviar código"}
                             </button>
 
+                        </div>
+
+                        {codigoEnviado && (
+                            <div className="reenviar_codigo">
+                                ¿No recibiste el código?{" "}
+                                <span
+                                    onClick={enviarCodigo}
+                                >
+                                    Reenviar
+                                </span>
+                            </div>
+                        )}
+
+                        <div className="volver_login">
+                            <a href="/">
+                                Volver al inicio de sesión
+                            </a>
                         </div>
 
                     </form>
