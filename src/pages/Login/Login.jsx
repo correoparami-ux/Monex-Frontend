@@ -246,7 +246,7 @@ export function Login() {
                             </span>
                         </div>
                             <p>
-                                <a href="/ForgotPassword" className="link_olvidaste_contraseña">
+                                <a href="/codigo_olvidar" className="link_olvidaste_contraseña">
                                     Olvidaste tu contraseña?
                                 </a>
                             </p>
