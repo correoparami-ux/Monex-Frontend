@@ -173,7 +173,7 @@ export async function verificarCodigoRecuperacion(email, codigo) {
 }
 
 export async function cambiarContraseña(email, codigo, newPassword) {
-    const response = await fetch(`${API_RECUPERAR}/cambiar-contraseña`, {
+    const response = await fetch(`${API_RECUPERAR}/cambiar-contrasena`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
