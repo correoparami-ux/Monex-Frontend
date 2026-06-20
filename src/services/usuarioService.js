@@ -178,7 +178,7 @@ export async function cambiarContraseña(email, codigo, newPassword) {
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, codigo, newPassword }),
+        body: JSON.stringify({ email, newPassword }),
     });
 
     if (!response.ok) {
