@@ -4,17 +4,22 @@ import logo from "../../assets/logo/Logo_Monex_Azul.png"
 
 
 import { useNavigate } from "react-router-dom";
-import { registrarUsuario, enviarCodigoRecuperacion, verificarCodigoRecuperacion } from "../../services/usuarioService";
+import { registrarUsuario, enviarCodigoRecuperacion, verificarCodigoRecuperacion, cambiarContraseña } from "../../services/usuarioService";
 
 export function RecuperarContraseña() {
 
     const [email, setEmail] = useState("");
     const [codigo, setCodigo] = useState("");
+    const [newPassword, setNewPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
 
     const [codigoEnviado, setCodigoEnviado] = useState(false);
+    const [codigoVerificado, setCodigoVerificado] = useState(false);
 
     const [mensaje, setMensaje] = useState("");
     const [colorMensaje, setColorMensaje] = useState("");
+
+    const navigate = useNavigate();
 
     const enviarCodigo = async (e) => {
         e.preventDefault();
@@ -47,11 +52,45 @@ export function RecuperarContraseña() {
 
         try {
             await verificarCodigoRecuperacion(email, codigo);
+            setCodigoVerificado(true);
             setMensaje("Código verificado correctamente.");
             setColorMensaje("green");
-            console.log("Código:", codigo);
         } catch (error) {
             setMensaje(error.message || "Código inválido");
+            setColorMensaje("red");
+        }
+    };
+
+    const cambiarPassword = async (e) => {
+        e.preventDefault();
+
+        if (!newPassword.trim()) {
+            setMensaje("Debe ingresar una nueva contraseña.");
+            setColorMensaje("red");
+            return;
+        }
+
+        if (newPassword.length < 6) {
+            setMensaje("La contraseña debe tener al menos 6 caracteres.");
+            setColorMensaje("red");
+            return;
+        }
+
+        if (newPassword !== confirmPassword) {
+            setMensaje("Las contraseñas no coinciden.");
+            setColorMensaje("red");
+            return;
+        }
+
+        try {
+            await cambiarContraseña(email, codigo, newPassword);
+            setMensaje("Contraseña cambiada correctamente. Redirigiendo...");
+            setColorMensaje("green");
+            setTimeout(() => {
+                navigate("/");
+            }, 2000);
+        } catch (error) {
+            setMensaje(error.message || "Error al cambiar la contraseña");
             setColorMensaje("red");
         }
     };
@@ -72,62 +111,110 @@ export function RecuperarContraseña() {
                     />
 
                     <h2 className="titulo_recuperar">
-                        Recuperar contraseña
+                        {codigoVerificado ? "Cambiar contraseña" : "Recuperar contraseña"}
                     </h2>
 
                     <p className="descripcion_recuperar">
-                        Ingresa tu correo electrónico y te enviaremos un código de verificación.
+                        {codigoVerificado 
+                            ? "Ingresa tu nueva contraseña"
+                            : "Ingresa tu correo electrónico y te enviaremos un código de verificación."}
                     </p>
 
                     <form
                         className="form_register_registro"
-                        onSubmit={codigoEnviado ? verificarCodigo : enviarCodigo}
+                        onSubmit={codigoVerificado ? cambiarPassword : (codigoEnviado ? verificarCodigo : enviarCodigo)}
                     >
 
-                        <div className="input_group_registro">
+                        {!codigoVerificado && (
+                            <>
+                                <div className="input_group_registro">
 
-                            <label className="text_email_registro">
-                                Correo electrónico
-                            </label>
+                                    <label className="text_email_registro">
+                                        Correo electrónico
+                                    </label>
 
-                            <div className="input_wrapper_registro">
+                                    <div className="input_wrapper_registro">
 
-                                <input
-                                    className="input_email_registro"
-                                    type="email"
-                                    placeholder="Ingresa tu correo"
-                                    value={email}
-                                    disabled={codigoEnviado}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                />
+                                        <input
+                                            className="input_email_registro"
+                                            type="email"
+                                            placeholder="Ingresa tu correo"
+                                            value={email}
+                                            disabled={codigoEnviado}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                        />
 
-                            </div>
-
-                        </div>
-
-                        {codigoEnviado && (
-
-                            <div className="input_group_registro">
-
-                                <label className="text_usuario_registro">
-                                    Código de verificación
-                                </label>
-
-                                <div className="input_wrapper_registro">
-
-                                    <input
-                                        className="codigo_input"
-                                        type="text"
-                                        placeholder="Ej: 482913"
-                                        value={codigo}
-                                        maxLength={6}
-                                        onChange={(e) => setCodigo(e.target.value)}
-                                    />
+                                    </div>
 
                                 </div>
 
-                            </div>
+                                {codigoEnviado && (
+                                    <div className="input_group_registro">
 
+                                        <label className="text_usuario_registro">
+                                            Código de verificación
+                                        </label>
+
+                                        <div className="input_wrapper_registro">
+
+                                            <input
+                                                className="codigo_input"
+                                                type="text"
+                                                placeholder="Ej: 482913"
+                                                value={codigo}
+                                                maxLength={6}
+                                                onChange={(e) => setCodigo(e.target.value)}
+                                            />
+
+                                        </div>
+
+                                    </div>
+                                )}
+                            </>
+                        )}
+
+                        {codigoVerificado && (
+                            <>
+                                <div className="input_group_registro">
+
+                                    <label className="text_usuario_registro">
+                                        Nueva contraseña
+                                    </label>
+
+                                    <div className="input_wrapper_registro">
+
+                                        <input
+                                            className="input_email_registro"
+                                            type="password"
+                                            placeholder="Ingresa tu nueva contraseña"
+                                            value={newPassword}
+                                            onChange={(e) => setNewPassword(e.target.value)}
+                                        />
+
+                                    </div>
+
+                                </div>
+
+                                <div className="input_group_registro">
+
+                                    <label className="text_usuario_registro">
+                                        Confirmar contraseña
+                                    </label>
+
+                                    <div className="input_wrapper_registro">
+
+                                        <input
+                                            className="input_email_registro"
+                                            type="password"
+                                            placeholder="Confirma tu contraseña"
+                                            value={confirmPassword}
+                                            onChange={(e) => setConfirmPassword(e.target.value)}
+                                        />
+
+                                    </div>
+
+                                </div>
+                            </>
                         )}
 
                         {mensaje && (
@@ -145,14 +232,16 @@ export function RecuperarContraseña() {
                                 className="boton_codigo"
                                 type="submit"
                             >
-                                {codigoEnviado
-                                    ? "Verificar código"
-                                    : "Enviar código"}
+                                {codigoVerificado
+                                    ? "Cambiar contraseña"
+                                    : codigoEnviado
+                                        ? "Verificar código"
+                                        : "Enviar código"}
                             </button>
 
                         </div>
 
-                        {codigoEnviado && (
+                        {codigoEnviado && !codigoVerificado && (
                             <div className="reenviar_codigo">
                                 ¿No recibiste el código?{" "}
                                 <span
