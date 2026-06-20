@@ -8,6 +8,7 @@ import analisis from "../../assets/icon/analisis.png";
 import estMensual from "../../assets/icon/est_mensual.png";
 import logout from "../../assets/icon/cerrar_sesion.png";
 import usuario_avatar from "../../assets/icon/usuario.png";
+import botonAdmin from "../../assets/icon/BotonAdmin.png";
 
 const USERS_BASE_URL = import.meta.env.VITE_USERS_API_URL;
 
@@ -74,6 +75,7 @@ export function SideBarAdmin() {
                     onClick={() => navigate("/PanelAdmin")}
                 >
                     Panel Admin
+                    <img src={botonAdmin} alt="Panel Admin" />
                 </button>
 
                 <button

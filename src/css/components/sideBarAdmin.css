@@ -54,7 +54,11 @@
   cursor: pointer;
   color: white;
   font-size: 24px;
- 
+}
+
+.boton_panel_admin img{
+  width: 30px;
+  height: 30px;
 }
 
 .boton_gastos{
@@ -255,6 +259,7 @@
   }
 
   .boton_inicio,
+  .boton_panel_admin,
   .boton_gastos,
   .boton_categoria,
   .boton_analisis,
@@ -267,6 +272,7 @@
   }
 
   .boton_inicio img,
+  .boton_panel_admin img,
   .boton_gastos img,
   .boton_categoria img,
   .boton_analisis img,
